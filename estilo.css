@@ -445,6 +445,14 @@ footer {
     margin: 0;
 }
 
+/*formulario agradecimento*/
+p{
+    font-weight: bold;
+    font: 1.2rem 'Futura LT', sans-serif;
+    color: #02253B;
+    text-align: center;
+    padding: 6px;
+}
 
 /* Para ocultar o menu inicialmente em telas pequenas */
 @media (max-width: 768px) {
