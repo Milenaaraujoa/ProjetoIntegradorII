@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@font-face {
+    font-family: "Lulo Clean One Bold";
+    src: url("https://db.onlinewebfonts.com/t/164a60c2e090248befbcf32fdd5af386.eot");
+    src: url("https://db.onlinewebfonts.com/t/164a60c2e090248befbcf32fdd5af386.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/164a60c2e090248befbcf32fdd5af386.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/164a60c2e090248befbcf32fdd5af386.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/164a60c2e090248befbcf32fdd5af386.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/164a60c2e090248befbcf32fdd5af386.svg#Lulo Clean One Bold")format("svg");
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --blue: #087285;
+    --white: #fff;
+    --gray: #F2EEF0;
+    --black1: #222;
+    --black2: #999;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #087285;
+}
+
+
+.bg1{
+    width: 500px;
+    position: absolute;
+    left: 0;     
+    bottom: 0;
+    z-index: -1;
+    margin-left: -40px;
+}
+.bg2{
+    width: 300px;
+    position: absolute;
+    right: 0;  
+    bottom: 0; 
+    z-index: -1;
+    margin-right: -80px;
+
+}
+
+.bg3{
+    width: 300px;
+    position: absolute;
+    right: 0;   
+    top: 0; 
+    margin-top: -60px;
+    margin-right: -80px;
+}
+
+
+.container{
+    position: relative;
+    width: 100%;
+}
+/*================navigation==============*/
+.navigation{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background-color: var(--blue);
+    transition: 0.5s;
+    overflow: hidden;
+}
+img{
+    width: 60%;
+    margin: 10px;
+    padding-top: 50px;
+    margin-left: 40px;
+}
+
+
+.navigation ul{
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-left: 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    padding-left: 40px;
+    font-family: 'Anton';
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered{
+    background-color: var(--gray);
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.navigation ul li:hover a,
+.navigation ul li.hovered{
+    color: var(--blue);
+
+}
+
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+
+
+/*----------------------curve outsite------------*/
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--gray);
+    pointer-events: none;
+}
+
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--gray);
+    pointer-events: none;
+}
+
+.main{
+    background-color: #F2EEF0;
+    width: calc(100% - 300px); 
+    height: calc(100% - 40px);
+    position: absolute;
+    left: 250px; 
+    z-index: 1; 
+    padding: 20px; 
+    top: 20px;
+    border-radius: 30px;
+}
