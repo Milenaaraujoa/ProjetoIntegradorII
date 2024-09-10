@@ -200,11 +200,13 @@ table {
     height: 40vh;
     display: block;
     border-radius: 10px;
+    object-fit: cover; 
 }
 
 .caption {
     color: #02253B;
-    font-family: 'Lulo Clean One Bold';
+    font-family: 'Futura LT Regular';
+    font-weight: 700;
     text-align: center;
     background-color: #A3A3A3;
     text-decoration: none;

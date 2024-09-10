@@ -73,7 +73,7 @@ body {
     overflow: hidden;
 }
 img{
-    width: 60%;
+    width: 80%;
     margin: 10px;
     padding-top: 50px;
     margin-left: 40px;
@@ -170,6 +170,7 @@ img{
     padding: 20px; 
     top: 20px;
     border-radius: 30px;
+    overflow: auto;
     
 }
 
@@ -393,7 +394,7 @@ table {
     margin: 10px;
 }
 
-img{
+.slide1 img, .slide2 img{
     max-width: 30%;
     align-items: center;
     border-radius: 10px;
@@ -406,32 +407,238 @@ p{
 }
 
 /* ------------------Turmas----------------- */
-.cardBox{
-    flex-grow:1 ;
+
+
+.cardBox {
+    background-color: #087285;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    height: 50vh;
+    margin-top: -1px;
 }
-.form-group{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+
+.tituloturma {
+    margin-top: -10px;
 }
-.input-group{
+
+.form-group {
     display: flex;
-    justify-content: space-between;
-    width: 14%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-row {
+    display: flex;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+label {
+    font: 1rem 'Futura LT Regular';
+    color: #CCC;
+    margin: 0;
+}
+
+
+input,
+select {
+    font: 0.9rem 'Futura LT Regular';
+    color: #A3A3A3;
+    border: 1px solid #ccc;
+    border-radius: 7px;
     padding: 10px;
-    border: 1px solid #004D40;
-    border-radius: 4px;
-    margin-right: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-left: 30px;
+}
+
+.nome {
+    margin-left: 15px;
+}
+.modalidade{
+    margin-right: -40px;
+}
+
+input[type="time"]{
+    margin-left: 8px;
 }
 
 button {
     background-color: #FF5722;
     color: white;
-    padding: 10px 20px;
+    padding: 9px 9px;
+    width: 100px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font: 1rem "Futura LT Regular",sans-serif;
+    font: 0.8rem "Futura LT Regular", sans-serif;
     margin-right: 50px;
+    height: 32px;
+
+}
+
+.buttonea {
+    text-align: center;
+}
+
+.buttonp {
+    text-align: right;
+}
+
+
+/*=====================EVENTOS===================*/
+.cardBoxevent{
+    background-color: #087285;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    height: 55vh;
+    margin-top: -1px;
+    flex: 1 1 calc(50% - 40px);
+    margin-right: 20px;
+    
+}
+
+.conteudo{
+    display: flex;
+    
+}
+
+input[type="date"]{
+    width: 35%;
+}
+
+.eventoscard{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+.evento1, .evento2{
+    background-color: #CCC;
+    display: flex;
+    max-width: 50%;
+    margin-bottom: 20px;
+    align-items: center;
+    border-radius: 3%;
+    margin: 10px; 
+    height: 20vh; 
+}
+
+
+.evento1 img, .evento2 img{
+    width: 40%;
+    height: 20vh;
+    margin-left: 3px;
+    border-radius: 20%;
+    padding: 10px;
+    object-fit: cover;
+}
+
+
+/*======================MODAL=======================*/
+
+/* Ajuste o modal para o mesmo tamanho do container */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com opacidade */
+  }
+  
+  /* Definir o conteúdo do modal para ter o mesmo tamanho do container */
+  .modal-content {
+    background-color: #60B4C3;
+    align-items: center;
+    border-radius: 4%;
+    border-end-end-radius: 4%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%; 
+    max-width: 800px; 
+    height: auto;
+    max-height: 80%; 
+    overflow-y: auto; 
+    
+  }
+  .formodal{
+    display: flex;
+    gap: 100px;
+    background-color: #02253B;
+    border-radius: 4%;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+
+.formodal input[type="text"],input[type="date"], input[type="time"]{
+    height: 35px;
+    margin: 5px;
+}
+
+.evento1_modal{
+    background-color: #CCC;
+    text-align: center;
+    align-items: center;
+    max-width: 50%;
+    margin-bottom: 20px;
+    align-items: center;
+    border-radius: 3%;
+    margin: 10px; 
+    height: 50vh; 
+}
+.evento1_modal img{
+    align-items: center;
+    width: 90%;
+    margin: 0;
+    margin-bottom: 50px;
+    border-radius: 10%;
+}
+  /* Estilo para o botão de fechar */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /*=============================MODAL TURMAS=======================*/
+
+.form-groupmodal{
+    gap: 100px;
+    background-color: #087285;
+    border-radius: 4%;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.form-groupmodal input[type="text"],input[type="date"], input[type="time"]{
+    height: 35px;
+    margin: 10px;
     
 }
