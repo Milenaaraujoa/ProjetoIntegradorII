@@ -22,7 +22,7 @@
             font-style: normal;
             font-weight: normal;
             src: local('Futura LT Regular'), url('FuturaLT.woff') format('woff');
-            }
+        }
 
         * {
             box-sizing: border-box;
@@ -33,72 +33,58 @@
         body {
             background-color: #F2EEF0;
             font-size: 80%;
-            overflow: hidden;
-            }
+        }
 
-        /*menu*/
-    
-
-   
-
+        /* Menu responsivo */
         .cabecalho {
             display: flex;
-            position: relative;
             flex-direction: row;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             background-color: #087285;
-            padding: 0 1px;
+            padding: 1rem;
             width: 100%;
-            height: 18dvh;
+            height: auto;
         }
 
-        .imgtexto{
+        .imgtexto {
             width: 157px;
             height: 67px;
-            margin-right: 150px;
-            
-        } 
-
-        .a-menu {
-            display: flex;
-            font: 1.2rem 'Anton', sans-serif;
-            text-decoration: none;
-            line-height: 20px;
-            text-align: center;
-            padding: 30px;
         }
 
-        /* cor para quando o link for clicado */
-        .a-menu:visited,
-        .a-menu:link {
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+        }
+
+        .a-menu {
+            display: inline-block;
+            font: 1.2rem 'Anton', sans-serif;
+            text-decoration: none;
+            padding: 0 20px;
             color: #FFF;
         }
 
-        /* cor para quando passar o mouse sobre o link */
-        .a-menu:hover,
-        .a-menu:active {
+        .a-menu:hover {
             color: #EA6F07;
         }
 
-        hr{
-            border-color: #EA6F07;
+        /* Banner */
+        #banner {
             width: 100%;
+            height: 100vh;
+            object-fit: cover;
         }
 
-        /*banner*/
-
-        header img{
-            width: 100%;
-            height: auto;
-            margin-bottom: 0%;
-        }
-        #banner{
-            width: 100%;
-            height: 90vh;
-        }
-
-        #bt-wpp{
+        #bt-wpp {
             width: 70px;
             height: 70px;
             background-color: #61E831;
@@ -110,7 +96,7 @@
             transition: 0.1s;
         }
 
-        .wpp{
+        .wpp {
             width: 50px;
             height: 50px;
             position: fixed;
@@ -118,36 +104,70 @@
             right: 40px;
         }
 
-        #bt-wpp:hover{
+        #bt-wpp:hover {
             box-shadow: 0 4px 8px #8C8585;
         }
 
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .cabecalho {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
+            .menu-toggle {
+                display: flex;
+            }
+
+            .a-menu {
+                display: none;
+                width: 100%;
+                padding: 15px;
+                background-color: #087285;
+                text-align: left;
+            }
+
+            .cabecalho.responsive .a-menu {
+                display: block;
+            }
+        }
     </style>
 
 </head>
 
 <body>
-   
     <nav>
-        <div class="cabecalho">
+        <div class="cabecalho" id="cabecalho">
             <img src="img/logo.png" alt="logo da academia agua vida" class="imgtexto">
-        <a class="a-menu" href="https://www.academiaaguavida.com.br/">Home</a>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a class="a-menu" href="#">Home</a>
             <a class="a-menu" href="modalidades.html">Modalidades</a>
-            <a class="a-menu" href="https://www.academiaaguavida.com.br/eventos">Eventos</a>
+            <a class="a-menu" href="#">Eventos</a>
+            <a class="a-menu" href="#">Formulário</a>
             <a class="a-menu" href="https://www.instagram.com/academia_aguavida/" target="_blank">Fale Conosco</a>
             <a class="a-menu" href="login_user.html"><img src="img/icon_user.png"></a>
         </div>
-        
-        </nav>
-        <hr /> 
-    <div> 
-        <img id="banner" src="img/banner.png">
+    </nav>
+
+    <hr />
+
+    <div>
+        <img id="banner" src="img/banner.png" alt="banner da academia">
         <div id="bt-wpp">
-            <img class="wpp" src="img/wpp-logo.png">
+            <img class="wpp" src="img/wpp-logo.png" alt="ícone do WhatsApp">
         </div>
     </div>
-     
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const cabecalho = document.getElementById('cabecalho');
+            cabecalho.classList.toggle('responsive');
+        });
+    </script>
 </body>
 
 </html>

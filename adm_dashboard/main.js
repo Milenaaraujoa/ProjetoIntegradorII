@@ -10,3 +10,4 @@ function activeLink(){
 }
 
 list.forEach(item => item.addEventListener("mouseover", activeLink))
+
