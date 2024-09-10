@@ -308,7 +308,7 @@ table {
     border-bottom: none; /* Remova a borda inferior para a última linha */
   }
 
-/* ====================== turmas ===================== */
+
 /*Calendário*/
 
 
@@ -403,4 +403,35 @@ p{
     font-family: 'Futura LT Regular';
     color: #087285;
     font-size: bold;
+}
+
+/* ------------------Turmas----------------- */
+.cardBox{
+    flex-grow:1 ;
+}
+.form-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.input-group{
+    display: flex;
+    justify-content: space-between;
+    width: 14%;
+    padding: 10px;
+    border: 1px solid #004D40;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #FF5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font: 1rem "Futura LT Regular",sans-serif;
+    margin-right: 50px;
+    
 }
