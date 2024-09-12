@@ -3,7 +3,7 @@ Projeto integrador do 2° semestre do curso Tecnologia em Sistemas para Internet
 
 ### Documentação:
 - [Documentação Docs - Online](https://docs.google.com/document/d/1l7OdAKPOV7IWwjHpS6dAycHDckfSktQynRrYSXPYSM4/edit?usp=sharing)<br/>
-- Arquivo PDF: [PI2_FINAL_IFB.pdf](https://github.com/user-attachments/files/16939207/PI2_FINAL_IFB.pdf)
+- Arquivo PDF:[PI2_FINAL_IFB.pdf](https://github.com/user-attachments/files/16983409/PI2_FINAL_IFB.pdf)
 
 
 
